@@ -76,7 +76,6 @@ var docCookies = {
     },
 };
 
-// 產品資料格式
 const app = {
     data() {
         return {
@@ -105,7 +104,7 @@ const app = {
                     this.products = res.data.products;
                 })
                 .catch(err => {
-                    alert(`取得失敗：${err.data.message}\n將返回登入頁。`);
+                    alert(`${err.data.message}\n將返回登入頁。`);
                     location.href = "./login.html";
                 })
         }
